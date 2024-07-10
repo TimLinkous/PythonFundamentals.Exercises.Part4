@@ -8,19 +8,20 @@ def give_me_a_num():
 def random_num():
     return randrange(1,10)
     
-def evaluate_numbers():
-    one = give_me_a_num()
-    two = random_num()
+    
+case_one = give_me_a_num()
+case_two = random_num()
 
-    for i in range(1, 5):
-        if one == two:
-            print("Congratulations!! You guessed the correct number!")
-        elif one > two:
+
+while case_one != case_two:
+    if case_one > case_two:
             print("Your guess is too high\n")
-            give_me_a_num() 
-        elif one < two:
+    elif case_one < case_two:
             print("Your guess is too low\n")
-            give_me_a_num()
+            
+    case_one = give_me_a_num()
+
+print("Congrats! You guessed the number!")
         
 
-evaluate_numbers()
+
